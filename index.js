@@ -38,7 +38,7 @@ if (cart.length === 0) {
       statement += `${key} at $${price}, `;
     }
   }
-  return statement;
+  console.log(statement);
 }
 }
 
