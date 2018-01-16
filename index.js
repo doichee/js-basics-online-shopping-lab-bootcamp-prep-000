@@ -20,6 +20,28 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
+if (cart.length === 0) {
+  console.log("Your shopping cart is empty.");
+} else {
+  var statement = "In your cart, you have ";
+  for (var i = 0; i < cart.length; i++) {
+    var item = cart[i];
+    var key = Object.keys(item);
+    var price = item[key];
+    if (cart.length === 1 ) {
+      statement +=`${key} at $${price}.`;
+    } else if (i === (cart.length - 1)) {
+      statement += `and ${key} at $${price}.`;
+    } else if (cart.length === 2) {
+      statement += `${key} at $${price} `;
+    } else {
+      statement += `${key} at $${price}, `;
+    }
+  }
+  return statement;
+}
+}
+
 }
 
 function total() {
