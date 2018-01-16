@@ -46,7 +46,7 @@ if (cart.length === 0) {
 function total() {
   // write your code here
   var total = 0;
-  for (var i=0; i < cart.length; i++) {
+  for (var i = 0; i < cart.length; i++) {
     for(var item in cart[i]) {
       sum += cart[i][item];
     }
